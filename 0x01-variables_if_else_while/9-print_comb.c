@@ -22,8 +22,8 @@ int main(void)
 		{
 			putchar(',');
 			putchar(' ');
-			current++;
 		}
+		current++;
 	}
 
 	putchar('\n');
