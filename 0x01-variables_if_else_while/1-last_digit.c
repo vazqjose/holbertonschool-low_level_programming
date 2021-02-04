@@ -19,7 +19,7 @@ int main(void)
 
 	lastdigit = n % 10;
 
-	printf("The last digit of %d is %d", n, lastdigit);
+	printf("Last digit of %d is %d", n, lastdigit);
 
 	if (lastdigit > 5)
 	{
@@ -31,7 +31,7 @@ int main(void)
 	}
 	else /* it must be 0	*/
 	{
-		printf(" is 0\n");
+		printf(" and is 0\n");
 	}
 
 	return (0);
