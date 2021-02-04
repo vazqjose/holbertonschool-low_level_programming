@@ -22,7 +22,7 @@ int main(void)
 		current_no++;
 	}
 
-	while (current_no <= 'f')
+	while (current_ch <= 'f')
 	{
 		putchar(current_ch);
 		current_ch++;
