@@ -11,26 +11,18 @@
 int main(void)
 {
 	int digit1 = '0';
-	int digit2 = '0';
+	int digit2 = '1';
 
 	while (digit1 <= '9')
 	{
-
 		while (digit2 <= '9')
 		{
-			if (digit2 == digit1)
-			{
-				/*	do nothing	*/
-			}
-			else if (digit2 == '0')
-			{
-			}
-			else
+			if (digit2 != digit1)
 			{
 				putchar(digit1);
 				putchar(digit2);
 
-				if (digit1 == '9' && digit2 == '9')
+				if (digit1 == '9' && digit2 == '8')
 				{
 					digit1++;
 					digit2++;
@@ -50,9 +42,14 @@ int main(void)
 					digit1++;
 				}
 			}
+			else
+			{
+				digit2++;
+			}
 		}
 	}
 
-		putchar('\n');
-		return (0);
+	putchar('\n');
+
+	return (0);
 }
