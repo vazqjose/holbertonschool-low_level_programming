@@ -12,38 +12,36 @@ void times_table(void)
 	int i;
 	int j;
 	int result;
-	int digit;
+	int digit1;
+	int digit2;
 
 	for (i = 0; i < 10; i++)
 	{
 		for (j = 0; j < 10; j++)
 		{
-			result = i * j;					/*	get result of each row * column element		*/
-			digit = (result / 10 + '0');		/*	obtain the first digit of result		*/
+			result = i * j;
+			digit1 = (result / 10 + '0');
+			digit2 = (result % 10 + '0');
 
-			/**
-			 *  if the first digit of the multiplication is zero, do not print it
-			 *  Replace it with a blank space instead
-			 */
-
-			if (digit != '0')
+			if (j == 0)
 			{
-				_putchar(result / 10 + '0');
+				_putchar(result + '0');
 			}
-			else
-			{
-				_putchar(' ');
-			}
-
-			_putchar(result % 10 + '0');
-
-			if (j != 9)
+			else if (result <= 9)
 			{
 				_putchar(',');
 				_putchar(' ');
+				_putchar(' ');
+				_putchar(result + '0');
+			}
+			else if (result > 9)
+			{
+				_putchar(',');
+				_putchar(' ');
+				_putchar(digit1);
+				_putchar(digit2);
 			}
 		}
-
 		_putchar('\n');
 	}
 
