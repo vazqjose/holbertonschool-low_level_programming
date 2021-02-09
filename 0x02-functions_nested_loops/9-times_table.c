@@ -30,6 +30,10 @@ void times_table(void)
 			{
 				_putchar(result / 10 + '0');
 			}
+			else
+			{
+				_putchar(' ');
+			}
 
 			_putchar(result % 10 + '0');
 
@@ -39,11 +43,6 @@ void times_table(void)
 				_putchar(' ');
 			}
 			
-			if (digit == '0')
-			{
-				_putchar(' ');
-			}
-
 		}
 
 		_putchar('\n');
