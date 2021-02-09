@@ -2,7 +2,6 @@
 
 /**
 * main - tests a function
-* @i: input number
 * Return: 0
 */
 
