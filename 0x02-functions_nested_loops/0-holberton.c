@@ -7,7 +7,7 @@
 int main(void)
 {
 	int i;
-	char myArray[10] = "holberton";
+	char myArray[10] = "Holberton";
 
 	for (i = 0; myArray[i] != '\0'; i++)
 	{
