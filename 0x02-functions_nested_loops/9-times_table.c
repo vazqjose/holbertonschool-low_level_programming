@@ -18,11 +18,12 @@ void times_table(void)
 	{
 		for (j = 0; j < 10; j++)
 		{
-			result = i * j;					/*	obtain multiplication of each row * column element		*/
-			digit = (result / 10 + '0');		/*	obtain the first digit of the multiplication result		*/
+			result = i * j;					/*	get result of each row * column element		*/
+			digit = (result / 10 + '0');		/*	obtain the first digit of result		*/
 
 			/**
-			 *  if the first digit of the multiplication is zero, do not print it.  Replace it with a blank space instead
+			 *  if the first digit of the multiplication is zero, do not print it
+			 *  Replace it with a blank space instead
 			 */
 
 			if (digit != '0')
@@ -35,7 +36,7 @@ void times_table(void)
 			}
 
 			_putchar(result % 10 + '0');
-			
+
 			if (j != 9)
 			{
 				_putchar(',');
