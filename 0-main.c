@@ -1,9 +1,12 @@
 #include "holberton.h"
 
 /**
- * main - tests function 
- * Return: 0
- */
+* main - tests a function
+* @i: input number
+* Return: 0
+*/
+
+void positive_or_negative(int i);
 
 int main(void)
 {
