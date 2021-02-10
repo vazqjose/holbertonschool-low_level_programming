@@ -42,9 +42,7 @@ void print_times_table(int n)
 					_putchar(result % 10 + '0');
 				}
 				if (n != j)
-				{
 					_putchar(',');
-				}
 			}
 			_putchar('\n');
 		}
