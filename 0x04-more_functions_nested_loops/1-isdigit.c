@@ -1,20 +1,24 @@
 #include "holberton.h"
 /**
- * _isdigit checks for uppercase letter
+ * _isdigit - checks if input is a digit
  *
- * @c: Letter to be checked
+ * @c: input to be checked
  *
- * Return: 1 if uppercase, 0 if otherwise
+ * Return: 1 if its a digit, 0 if otherwise
  */
 
 int _isdigit(int c)
 {
-	if (c >= 'a' && c <= 'Z')
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c >= 'Z'))
 	{
 		return (0);
 	}
-	else
+	else if (c > 0 && c <= 9)
 	{
 		return (1);
+	}
+	else
+	{
+		return (0);
 	}
 }
