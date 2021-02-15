@@ -2,8 +2,8 @@
 
 /**
  * reset_to_98 - takes a pointer to an int and updates the value
- *
- * Returns: nothing
+ * @n: string to input
+ * Return: nothing
  */
 
 void reset_to_98(int *n)
