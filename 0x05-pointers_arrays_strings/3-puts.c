@@ -1,6 +1,4 @@
 #include "holberton.h"
-#include <string.h>
-
 /**
  *  _puts - prints a string to stdout
  *
@@ -9,16 +7,14 @@
  * Return: Nothing
  */
 
-
 void _puts(char *str)
 {
 	int i;
-	int len;
 
-	len = strlen(str);
-
-	for (i=0; i < len; i++)
+	for (i = 0; str[i] != '\0'; i++)
 	{
-		_putchar(str[i] + '0');
+		_putchar(str[i]);
 	}
+
+	_putchar('\n');
 }
