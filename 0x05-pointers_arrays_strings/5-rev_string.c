@@ -17,13 +17,15 @@ void rev_string(char *s)
 
 	}
 
-	for (i = 0; i < len; i++)
+	len--;
+
+	for (i = 0; i <= len; i++)
 	{
 		temp1 = s[i];
 		temp2 = s[len];
 
-		*s[i] = temp2;
-		*s[len] = temp1;
+		s[i] = temp2;
+		s[len] = temp1;
 
 		len--;
 	}
