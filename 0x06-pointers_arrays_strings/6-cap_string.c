@@ -9,7 +9,8 @@
 char *cap_string(char *str)
 {
 	int i, j;
-	char arr[] = {'\t', '\n', ';', ':', '.', ',', '!', '(', ')', '{', '}', '?', '\"', ' '};
+	char arr[] = {'\t', '\n', ';', ':', '.', ',', '!', '(', ')'
+	, '{', '}', '?', '\"', ' '};
 
 	i = 0;
 
@@ -20,13 +21,13 @@ char *cap_string(char *str)
 	}
 
 
-	for ( ; str[i] != '\0'; i++	)	/*	go through the string	*/
+	for ( ; str[i] != '\0'; i++)
 	{
-		for (j = 0; arr[j] != '\0'; j++)	/*	look the character up in the array	*/
+		for (j = 0; arr[j] != '\0'; j++)
 		{
 			if (str[i] >= 'a' && str[i] <= 'z')
 			{
-				if (str[i-1] == arr[j])
+				if (str[i - 1] == arr[j])
 				{
 					str[i] -= 32;
 				}
