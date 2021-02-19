@@ -9,6 +9,7 @@
 char *string_toupper(char *c)
 {
 	int i = 0;
+	char arr[] = {'\t', '\n', ';', ':', '.', ',', '!', '(', ')', '{', '}'};
 
 	while (c[i] != '\0')
 	{
