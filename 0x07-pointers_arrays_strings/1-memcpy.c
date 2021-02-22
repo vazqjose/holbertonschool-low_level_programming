@@ -1,21 +1,21 @@
 #include "holberton.h"
 
 /**
- * memset - fill memory with a constant byte
- * @s: variable receiving memory
- * @b: variable to fill with
+ * _memcpy - copies n bytes to src memory
+ * @dest: variable receiving memory
+ * @src: variable to copy from
  * @n: amount of bytes
  * Return: pointer to dest
  */
 
-char *_memset(char *s, char b, unsigned int n)
+char *_memcpy(char *dest, char *src, unsigned int n)
 {
 	unsigned int i;
 
 	for (i = 0; i < n; i++)
 	{
-		s[i] += b;
+		dest[i] = src[n];
 	}
-	
-	return (s);
+
+	return (dest);
 }
