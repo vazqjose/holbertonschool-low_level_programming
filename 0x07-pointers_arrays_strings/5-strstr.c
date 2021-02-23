@@ -25,8 +25,9 @@ char *_strstr(char *haystack, char *needle)
 		if (*search == '\0')
 		{
 			return (start);
-			haystack = start + 1;
 		}
+
+		haystack = start + 1;
 	}
 	return (0);
 }
