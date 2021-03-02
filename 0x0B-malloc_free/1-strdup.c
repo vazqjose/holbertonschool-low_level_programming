@@ -1,5 +1,8 @@
 #include "holberton.h"
 #include <stdlib.h>
+#include <limits.h>
+#include <stdio.h>
+
 /**
  * _strdup - returns pointer to a new string
  * @str: input string to be duplicated
@@ -20,10 +23,18 @@ char *_strdup(char *str)
 	}
 
 	newstr = malloc(sizeof(*str) * i);
-	
+
+	if (malloc(INT_MAX) == NULL)
+	{
+		return (NULL);
+	}
+	else
+	{
 		for (i = 0; str[i] != '\0'; i++)
 		{
 			newstr[i] = str[i];
 		}
-	return newstr;
+
+		return newstr;
+	}
 }
