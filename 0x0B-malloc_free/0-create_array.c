@@ -26,6 +26,13 @@ char *create_array(unsigned int size, char c)
 
 	A[i] = '\0';
 
-	return (A);
-	free (A);
+	if (A != NULL)
+	{
+		return (A);
+		free(A);
+	}
+	else
+	{
+		return (NULL);
+	}
 }
