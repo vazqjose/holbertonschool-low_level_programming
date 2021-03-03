@@ -23,7 +23,7 @@ char *str_concat(char *s1, char *s2)
 	for (i = 0; s1[i] != '\0'; i++) /* get size of string1 */
 	for (j = 0; s2[j] != '\0'; j++) /* get size of string2 */
 
-	newstr = malloc((sizeof(*s1) * i) + (sizeof(*s2) * j) + 1);
+	newstr = malloc(i + j * sizeof(char) + 1);
 
 	if (newstr == NULL)
 	{ return (NULL); }
