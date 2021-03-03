@@ -21,8 +21,9 @@ char *str_concat(char *s1, char *s2)
 		s2 = "";
 
 	for (i = 0; s1[i] != '\0'; i++) /* get size of string1 */
+		;
 	for (j = 0; s2[j] != '\0'; j++) /* get size of string2 */
-
+		;
 	newsize = i + j + 1;
 	newstr = malloc(newsize * sizeof(char));
 
@@ -30,14 +31,9 @@ char *str_concat(char *s1, char *s2)
 		return (NULL);
 
 	for (n1 = 0; n1 < i; n1++)
-	{
 		newstr[n1] = s1[n1];
-	}
-	s = 0;
-	for (n2 = n1; n2 < newsize; n2++)
-	{
+	for (n2 = n1, s = 0; n2 < newsize; n2++, s++)
 		newstr[n2] = s2[s];
-		s++;
-	}
+
 	return (newstr);
 }
