@@ -15,6 +15,11 @@ char *str_concat(char *s1, char *s2)
 	char *newstr;
 	int i, j, n1, n2, newsize, s;
 
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s1 = "";
+
 	for (i = 0; s1[i] != '\0'; i++) /* get size of string1 */
 	for (j = 0; s2[j] != '\0'; j++) /* get size of string2 */
 
