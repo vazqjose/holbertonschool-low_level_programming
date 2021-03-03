@@ -18,28 +18,26 @@ char *str_concat(char *s1, char *s2)
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
-		s1 = "";
+		s2 = "";
 
 	for (i = 0; s1[i] != '\0'; i++) /* get size of string1 */
 	for (j = 0; s2[j] != '\0'; j++) /* get size of string2 */
 
-	newstr = malloc(i + j * sizeof(char) + 1);
+	newsize = i + j + 1;
+	newstr = malloc(newsize * sizeof(char));
 
 	if (newstr == NULL)
-	{ return (NULL); }
-	else
+		return (NULL);
+
+	for (n1 = 0; n1 < i; n1++)
 	{
-		newsize = i + j + 1;
-		for (n1 = 0; n1 < i; n1++)
-		{
-			newstr[n1] = s1[n1];
-		}
-		s = 0;
-		for (n2 = n1; n2 < newsize; n2++)
-		{
-			newstr[n2] = s2[s];
-			s++;
-		}
-		return (newstr);
+		newstr[n1] = s1[n1];
 	}
+	s = 0;
+	for (n2 = n1; n2 < newsize; n2++)
+	{
+		newstr[n2] = s2[s];
+		s++;
+	}
+	return (newstr);
 }
