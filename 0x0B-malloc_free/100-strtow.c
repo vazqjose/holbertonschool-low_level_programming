@@ -8,10 +8,12 @@
  * Return: Null if str is null
  */
 
-ar **strtow(char *str)
+char **strtow(char *str)
 {
 	int i;
 
 	if (str == NULL || str == "")
 		return (NULL);
+
+	return (str);
 }
