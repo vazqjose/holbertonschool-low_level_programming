@@ -16,6 +16,12 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	char *newString;
 	unsigned int size1, size2, newSize;
 
+	if (s1 == 0)
+		s1 = "";
+
+	if (s2 == 0)
+		s2 = "";
+
 	for (size1 = 0; s1[size1] != '\0'; size1++)
 		;
 	for (size2 = 0; s2[size2] != '\0'; size2++)
@@ -24,10 +30,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (n < size2)
 	{
 		size2 = n;
-	}
-	else if (n >= size2)
-	{
-
 	}
 
 	newSize = sizeof(char) * size1 + size2 + 1;
