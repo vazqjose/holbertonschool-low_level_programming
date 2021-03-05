@@ -14,15 +14,18 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	unsigned int i;
 	char *myArr;
+	unsigned int total;
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
 
-	myArr = malloc(nmemb * size);
+	total = nmemb * size;
+
+	myArr = malloc(total);
 	if (myArr == NULL)
 		return (NULL);
 
-	for (i = 0; i < nmemb; i++)
+	for (i = 0; i < total; i++)
 	{
 		myArr[i] = 0;
 	}
