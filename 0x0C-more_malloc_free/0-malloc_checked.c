@@ -18,5 +18,10 @@ void *malloc_checked(unsigned int b)
 	if (myPtr == NULL)
 	{
 		free(myPtr);
+		exit(98);
+	}
+	else
+	{
+		return (myPtr);
 	}
 }
