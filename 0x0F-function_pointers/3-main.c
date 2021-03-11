@@ -4,10 +4,12 @@
 
 /**
  * main - calculate operation
+ * @argc: num of parameters
+ * @argv: list of parameters
  * Return: Nothing
  */
 
-int main (int argc, char *argv[])
+int main(int argc, char *argv[])
 {
 	int num1, num2;
 
@@ -21,12 +23,6 @@ int main (int argc, char *argv[])
 	{
 		printf("Error\n");
 		exit(99);
-	}
-
-	if ((argv[2] == '/' || argv[2] == '%') && argv[3] == '0')
-	{
-		printf("Error\n");
-		exit(100);
 	}
 
 	num1 = atoi(argv[1]);
