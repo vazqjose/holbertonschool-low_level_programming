@@ -21,8 +21,8 @@ void print_strings(const char *separator, const unsigned int n, ...)
 
 		if (myStr == '\0')
 			myStr = "(nil)";
-		else
-			printf("%s", myStr);
+
+		printf("%s", myStr);
 
 		if (separator != '\0' && i + 1 != n)
 			printf("%s", separator);
