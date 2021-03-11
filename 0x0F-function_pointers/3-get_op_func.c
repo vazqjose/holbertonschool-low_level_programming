@@ -19,9 +19,9 @@ int (*get_op_func(char *s))(int, int)
 
 	int i = 0;
 
-	while (ops[i].op != NULL)
+	while (ops[i].op != '\0')
 	{
-		if (s == ops[i].op)
+		if (strcmp(s, ops[i].op) == 0)
 		{
 			return (ops[i].f);
 		}
