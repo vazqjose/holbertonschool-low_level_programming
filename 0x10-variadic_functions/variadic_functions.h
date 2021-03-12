@@ -4,6 +4,11 @@
 #include <stdlib.h>
 #include <stdarg.h>
 
+/**
+ * struct myStruct - structure list
+ * @op: operand
+ * @p: pointer to function
+ */
 typedef struct myStruct
 {
 	char *op;
