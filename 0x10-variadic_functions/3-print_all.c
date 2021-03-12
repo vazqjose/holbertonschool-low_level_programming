@@ -70,7 +70,7 @@ void print_all(const char * const format, ...)
 
 	va_start(myArgList, format);
 
-	while (format[j] != '\0')
+	while (format != NULL && format[j] != '\0')
 	{
 		i = 0;
 
