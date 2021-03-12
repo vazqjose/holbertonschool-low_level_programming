@@ -21,7 +21,7 @@ void fn_int(va_list myArgList)
 }
 
 /*
- * fn_float - print float
+ * fn_float - print floats
  * @myArgList: input arguments
  * Return: None
  */
