@@ -78,10 +78,9 @@ void print_all(const char * const format, ...)
 		{
 			if (format[j] == *(myTypes[i].op))
 			{
+				printf("%s", divisor);
 				myTypes[i].p(myArgList);
-				
-				if (format[j + 1] != '\0')
-					printf("%s", divisor);
+				divisor = ", ";
 			}
 			i++;
 		}
