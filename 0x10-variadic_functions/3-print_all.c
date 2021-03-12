@@ -1,31 +1,50 @@
 #include "variadic_functions.h"
 
+/**
+ * fn_char - print chars
+ * @myArgList: input arguments
+ * Return: Nothing
+ */
 void fn_char(va_list myArgList)
 {
 	printf("%c", va_arg(myArgList, int));
 }
 
+/*
+ * fn_int - print ints
+ * @myArgList: input arguments
+ * Return: None
+ */
 void fn_int(va_list myArgList)
 {
 	printf("%d", va_arg(myArgList, int));
 }
 
+/*
+ * fn_float - print float
+ * @myArgList: input arguments
+ * Return: None
+ */
 void fn_float(va_list myArgList)
 {
 	printf("%f", va_arg(myArgList, double));
 }
 
+/**
+ * fn_string - print string
+ * @myArgList: input arguments
+ * Return: None
+ */
 void fn_string(va_list myArgList)
 {
 	char *myString;
-	char *tempStr;
 
 	myString = va_arg(myArgList, char *);
 
 	if (myString == NULL)
-		tempStr = "(nil)";
+		myString = "(nil)";
 
-	printf("%s", tempStr);
+	printf("%s", myString);
 }
 
 /**
