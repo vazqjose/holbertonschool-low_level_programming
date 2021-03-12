@@ -56,7 +56,7 @@ void print_all(const char * const format, ...)
 {
 	int i;
 	int j = 0;
-	char *divisor = ", ";
+	char *divisor = "";
 
 	va_list myArgList;
 
