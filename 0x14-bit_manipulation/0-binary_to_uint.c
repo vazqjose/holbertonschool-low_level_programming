@@ -7,22 +7,27 @@
 
 unsigned int binary_to_uint(const char *b)
 {
-	int i;
+	int i, max, bit = 0, exp = 0;
+	unsigned int resultBin = 0;
 
 	if (b == NULL)
 		return (0);
 
-	for (i = 0; b[i] != '\0'; i++)
-	{
-		if (b[i] == '0' || b[i] == '1')
-		{
+	for (max = 0; b[max] != '\0'; max++)
+		;
 
-		}
+	for (i = max - 1; i >= 0; i--)
+	{
+		if (b[i] == '1')
+			bit = 1;
+		else if (b[i] == '0')
+			bit = 0;
 		else
-		{
 			return (0);
-		}
+
+		resultBin += bit << exp;
+		exp++;
 	}
 
-	return (0);
+	return (resultBin);
 }
