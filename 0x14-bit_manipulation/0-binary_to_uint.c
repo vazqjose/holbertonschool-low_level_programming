@@ -7,7 +7,7 @@
 
 unsigned int binary_to_uint(const char *b)
 {
-	int i, max, bit = 0, exp = 0;
+	int i, max, bit = 0, expr = 0;
 	unsigned int resultBin = 0;
 
 	if (b == NULL)
@@ -25,8 +25,8 @@ unsigned int binary_to_uint(const char *b)
 		else
 			return (0);
 
-		resultBin += bit << exp;
-		exp++;
+		resultBin += bit << expr;
+		expr++;
 	}
 
 	return (resultBin);
