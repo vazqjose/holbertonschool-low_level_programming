@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- * flip_bit - returns the number of bits you would need to flip
+ * flip_bits - returns the number of bits you would need to flip
  * @m: bit provided
  * @n: bits to flip
  * Return: Binary number
