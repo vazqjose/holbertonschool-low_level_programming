@@ -1,4 +1,4 @@
-#### 0X1.C - Bit manipulation
+#### 0X14.C - Bit manipulation
 
 ##	Instructions to follow
 	Allowed editors: vi, vim, emacs
