@@ -1,4 +1,4 @@
-#import "lists.h"
+#include "lists.h"
 
 /**
  * free_dlistint - frees a list
@@ -8,7 +8,7 @@
 
 void free_dlistint(dlistint_t *head)
 {
-	listint_t *tmp;
+	dlistint_t *tmp;
 
 	if (head == NULL)
 		return;
