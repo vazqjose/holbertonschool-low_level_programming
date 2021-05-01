@@ -9,15 +9,15 @@
 
 dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 {
-	struct dlistint_s *new = malloc(sizeof(struct dlistint_s));
-	struct dlistint_s *ptr = *head;
+	dlistint_s *new;
+	dlistint_s *ptr = *head;
 
+	new = malloc(sizeof(dlistint_s));
 	if (new == NULL)
 	{
 		return (NULL);
 	}
 	new->n = n;
-	new->next = NULL;
 
 	if (*head == NULL)
 	{
@@ -31,7 +31,8 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 		ptr = ptr->next;
 	}
 	ptr->next = new;
-	new->prev = ptr;
-	
+	new->prev = ptr
+	new->next = NULL;
+
 	return(new);
 }
