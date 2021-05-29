@@ -89,11 +89,9 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		myval = strdup(value);
 		if (myval == NULL)
 			return (0);
-		else
-		{
-			newItem->value = myval;
-			return (1);
-		}
+
+		newItem->value = myval;
+		return (1);
 	}
 
 	return (create_hash_node(ht, key, value, index));
