@@ -1,6 +1,6 @@
 #include "hash_tables.h"
 
-/*
+/**
  * hash_table_get - get value at key index
  * @ht: hash table
  * @key: begining of list
@@ -17,11 +17,11 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	index = key_index((const unsigned char *)key, ht->size);
 	myNode = ht->array[index];
 
-	while (node != NULL && (strcmp(key, mode->key) != 0))
-		node = node->next;
+	while (myNode != NULL && (strcmp(key, myNode->key) != 0))
+		myNode = myNode->next;
 
-	if (node ==NULL)
+	if (myNode == NULL)
 		return (NULL);
 
-	return (node->value);
+	return (myNode->value);
 }
