@@ -3,6 +3,6 @@ SRC = main.c holberton.c
 OBJ = main.o holberton.o
 NAME = holberton
 
-all:
+all: m.h ${OBJ}
 	${CC} -c ${SRC}
 	${CC} ${OBJ} -o ${NAME}
