@@ -2,6 +2,29 @@
 #include <math.h>
 
 /**
+ * print_array - prints current state of array
+ * @array: array to be printed
+ * @leftB: left boundary of portion
+ * @rightB: right boundary of portion
+ * Return: Nothing
+ */
+void print_array(int *array, int leftB, int rightB)
+{
+	int i = 0;
+
+	printf("Searching in array: ");
+
+	for (i = leftB; i <= rightB; i++)
+	{
+		printf("%i", array[i]);
+		if (i < rightB)
+			printf(", ");
+	}
+	printf("\n");
+}
+
+
+/**
  * binary_search- searches for a value in an array of integers
  * using binary search algorithm
  * @array: pointer to the first element of the array to search in
@@ -15,7 +38,6 @@ int binary_search(int *array, size_t size, int value)
 	int leftB = 0;
 	int rightB = size - 1;
 	unsigned int midPos = 0;
-	int i = 0;
 
 	if (array == NULL)
 		return (-1);
@@ -23,23 +45,19 @@ int binary_search(int *array, size_t size, int value)
 	while (leftB <= rightB)
 	{
 		midPos = (leftB + rightB) / 2;
-		printf("Searching in array: ");
-
-		for (i = leftB; i <= rightB; i++)
-		{
-			printf("%i", i);
-			if (i < rightB)
-				printf(", ");
-		}
-		printf("\n");
 
 		if (value > array[midPos])
+		{
+			print_array(array, leftB, rightB);
 			leftB = midPos + 1;
+		}
 		else if (value < array[midPos])
+		{
+			print_array(array, leftB, rightB);
 			rightB = midPos - 1;
+		}
 		else if (array[midPos] == value)
 		{
-			printf("\n");
 			return (midPos);
 		}
 	}
