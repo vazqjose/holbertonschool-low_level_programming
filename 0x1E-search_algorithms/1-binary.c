@@ -34,25 +34,17 @@ int binary_search(int *array, size_t size, int value)
 			if (i < rightB)
 				printf(", ");
 		}
-
 		printf("\n");
 
 		if (value > array[midPos])
-		{
 			leftB = midPos + 1;
-
-		}
 		else if (value < array[midPos])
-		{
 			rightB = midPos - 1;
-
-		}
 		else if (array[midPos] == value)
 		{
 			printf("\n");
 			return (midPos);
 		}
-
 	}
 	return (-1);
 }
