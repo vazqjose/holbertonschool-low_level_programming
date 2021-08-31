@@ -48,13 +48,13 @@ int binary_search(int *array, size_t size, int value)
 
 		if (value > array[midPos])
 		{
-			print_array(array, leftB, rightB);
 			leftB = midPos + 1;
+			print_array(array, leftB, rightB);
 		}
 		else if (value < array[midPos])
 		{
-			print_array(array, leftB, rightB);
 			rightB = midPos - 1;
+			print_array(array, leftB, rightB);
 		}
 		else if (array[midPos] == value)
 		{
