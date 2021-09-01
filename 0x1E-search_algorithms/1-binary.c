@@ -45,19 +45,20 @@ int binary_search(int *array, size_t size, int value)
 	if (array == NULL)
 		return (-1);
 
+	print_array(array, leftB, rightB);
 	while (leftB <= rightB)
 	{
 		midPos = (leftB + rightB) / 2;
 
 		if (value > array[midPos])
 		{
-			print_array(array, leftB, rightB);
 			leftB = midPos + 1;
+			print_array(array, leftB, rightB);
 		}
 		else if (value < array[midPos])
 		{
-			print_array(array, leftB, rightB);
 			rightB = midPos - 1;
+			print_array(array, leftB, rightB);
 		}
 		else if (array[midPos] == value)
 		{
